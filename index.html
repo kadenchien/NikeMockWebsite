@@ -7,35 +7,31 @@
     <title>Your Page Title</title>
     <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
     <style>
+        body {
+            margin: 0;
+            display: flex;
+        }
         /* Basic styling for the sidebar */
         .sidebar {
             width: 200px; /* Adjust width as needed */
-            background-color: #f0f0f0;
+            height: 100%;
+            background-color: #3a3a3a;
             float: left; /* Ensure the sidebar stays on the left */
-        }
 
-        /* Styling for sidebar links */
-        .sidebar a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
         }
-
-        /* Styling for active sidebar link */
-        .sidebar a.active {
-            background-color: #ddd;
+        .sideText{
+            font-size: 40px; 
+            color: white;
         }
+        
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <!-- Sidebar content -->
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        <!-- Add more links as needed -->
+        <img src="./img/nikelogo.png">
+        <p class="sideText" style="padding-bottom:20px">J <br> U <br> S <br> T <br></p>
+        <p class="sideText" style="padding-bottom:20px">D <br> O <br></p>
+        <p class="sideText">I <br> T</p>
     </div>
 
     <div class="main-content">
