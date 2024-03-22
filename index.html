@@ -1,1 +1,46 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
+    <style>
+        /* Basic styling for the sidebar */
+        .sidebar {
+            width: 200px; /* Adjust width as needed */
+            background-color: #f0f0f0;
+            float: left; /* Ensure the sidebar stays on the left */
+        }
+
+        /* Styling for sidebar links */
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Styling for active sidebar link */
+        .sidebar a.active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Sidebar content -->
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <!-- Add more links as needed -->
+    </div>
+
+    <div class="main-content">
+        <!-- Main content of your page goes here -->
+        <h1>Main Content</h1>
+        <p>This is the main content of your page.</p>
+    </div>
+</html>
