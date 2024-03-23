@@ -24,7 +24,7 @@
             }
             /* Basic styling for the sidebar */
             .sidebar {
-                position: fixed;
+                position: relative;
                 width: 10%; /* Adjust width as needed */
                 height: 100vh;
                 background-color: #2a2a2a;
@@ -42,7 +42,7 @@
                 margin-right: auto;
             }
             .sideText {
-                padding-right: 50px;
+                padding-top: 50%;
                 font-family: "Black Ops One", system-ui;
                 font-weight: 400;
                 font-style: normal;
@@ -51,6 +51,7 @@
                 color: #fff;
                 margin-top: 20px;
                 letter-spacing: 5px;
+                text-wrap: nowrap;
             }
             .main-area {
                 width: 100%;
@@ -85,7 +86,7 @@
             }
             .description {
                 margin-top: 0;
-                font-size: 15px;
+                font-size: 12px;
                 letter-spacing: 2px;
             }
             .navbar {
@@ -111,39 +112,58 @@
             .main-content {
                 padding-left: 5%;
             }
-            button {
-                font-size: 16px;
-                position: relative;
-                margin: auto;
-                padding: 1em 2.5em 1em 2.5em;
-                border: none;
-                background: #333;
-                transition: all 0.1s linear;
-                box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+            .button {
+            --color: #00A97F;
+            padding: 0.8em 1.7em;
+            background-color: transparent;
+            border-radius: .3em;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .5s;
+            font-weight: 400;
+            font-size: 17px;
+            border: 1px solid;
+            font-family: inherit;
+            text-transform: uppercase;
+            color: var(--color);
+            z-index: 1;
             }
-            button:active {
-                transform: scale(0.95);
+
+            .button::before, .button::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color);
+            transition: 1s ease;
             }
-            button span {
-                color: #fff
+
+            .button::before {
+            top: -1em;
+            left: -1em;
             }
-            button .border {
-                position: absolute;
-                border: 0.15em solid #fff;
-                transition: all 0.3s 0.08s linear;
-                top: 50%;
-                left: 50%;
-                width: 9em;
-                height: 3em;
-                transform: translate(-50%, -50%);
+
+            .button::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
             }
-            button:hover .border {
-                display: block;
-                width: 9.9em;
-                height: 3.7em;
+
+            .button:hover::before, .button:hover::after {
+            height: 410px;
+            width: 410px;
             }
-            .cart {
-                border-radius: 2em;
+
+            .button:hover {
+            color: rgb(10, 25, 30);
+            }
+
+            .button:active {
+            filter: brightness(.8);
             }
         </style>
     </head>
@@ -170,10 +190,7 @@
                 midsoles incorporating flexible urethane pouches filled with<br>
                 pressurized gas, visible from the exterior of the shoe and intended<br>
                 to provide cushioning to the underfoot.</i></p>
-                <button class="cart">
-                    <span>Add To Cart</span>
-                    <div class="border"></div>
-                </button>
+                <button class="button"> Add To Cart </button>
             </div>
         </div>  
     </html>
