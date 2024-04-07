@@ -11,6 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Your Page Title</title>
@@ -19,7 +23,7 @@
             body {
                 margin: 0;
                 display: flex;
-                background-color: rgb(13, 13, 13);
+                background-color: black;
                 color: white;
             }
             /* Basic styling for the sidebar */
@@ -36,24 +40,24 @@
                 text-align: center;
             }
             .sidebar img {
-                padding-top: 50px;
-                width: 60%;
+                padding-top: 40px;
+                width: 80%;
                 margin-left: auto;
                 margin-right: auto;
             }
             .sideText {
                 position: absolute;
-                top: 75%;
-                padding-left: 50px;
+                top: 50vh;
+                padding-left: 80px;
                 font-family: "Black Ops One", system-ui;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 50px;
+                font-size: 60px;
                 transform: rotate(-90deg);
                 color: #fff;
-                letter-spacing: 5px;
                 text-wrap: nowrap;
                 text-align: left;
+                letter-spacing: 5px;
             }
             .main-area {
                 width: 100%;
@@ -64,18 +68,17 @@
                 font-variation-settings:
                 "wdth" 100;
             }
-            .main-content {
-                padding-top: 5%;
-            }
             .productTitle {
                 font-family: "Black Ops One", system-ui;
                 font-weight: 400;
                 font-style: normal;
+                font-style: normal;
                 font-size: 100px;
                 margin-bottom: 0;
+                letter-spacing: 4px;
             }
             .subTitle {
-                font-size: 30px;
+                font-size: 40px;
                 margin-top: 0;
             }
             .price {
@@ -90,19 +93,20 @@
                 margin-top: 0;
                 font-size: 12px;
                 letter-spacing: 2px;
+                margin-bottom: 50px;
             }
             .navbar {
-                position: fixed;
+                position: relative;
                 width: 100%;
                 height: 10%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #333;
+                z-index: 1;
             }
             .navbar a {
                 text-decoration: none;
-                padding: 5px 30px;
+                padding-right: 30px;
                 color: white;
                 font-size: 15px;
                 letter-spacing: 2px;
@@ -112,14 +116,15 @@
                 color: gold;
             }
             .main-content {
+                margin-top: 0;
                 padding-left: 5%;
             }
             .button { 
             padding-top: 80px;
             --color: #fff;
             padding: 0.8em 1.7em;
-            background-color: transparent;
-            border-radius: .3em;
+            background-color: #333;
+            border-radius: 1.5em;
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -168,12 +173,29 @@
             .button:active {
             filter: brightness(.8);
             }
+            .model-area{
+                position: absolute;
+                top: 15vh;
+                left: 55vw; 
+                width: 40vw;
+                height: 70vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0;
+            }
+            .shoe-photo{
+                justify-content: center;
+                padding-top: 10vh;
+                width: 40vw;
+                height: auto;
+            }
         </style>
     </head>
     <body>
         <div class="sidebar">
-            <img src="./img/nikelogo.png" class="nikeLogo">
-            <p class="sideText">JUST DO IT</p>
+            <img src="./img/nikelogo.png" class="nike-logo">
+            <p class="sideText">JUST  DO  IT</p>
         </div>
         <div class="main-area">
             <div class="navbar">
@@ -184,16 +206,22 @@
                 <!-- Add more links as needed -->
             </div>
             <div class="main-content">
-                <!-- Main content of your page goes here -->
-                <h1 class="productTitle">AIR MAX</h1>
-                <p class="subTitle">NIKE AIR MAX 90</p>
-                <p class="price">$98</p>
-                <p class="description"><i>Nike Air Max is a line of shoes produced by Nike, Inc.,<br>
-                with the first model released in 1987. Air Max shoes are identified by their<br>
-                midsoles incorporating flexible urethane pouches filled with<br>
-                pressurized gas, visible from the exterior of the shoe and intended<br>
-                to provide cushioning to the underfoot.</i></p>
-                <button class="button"> Add To Cart </button>
+                    <!-- Main content of your page goes here -->
+                    <h1 class="productTitle">AIR MAX</h1>
+                    <p class="subTitle">NIKE AIR MAX 90</p>
+                    <p class="price">$180</p>
+                    <p class="description"><i>
+                        Nike Air Max is a line of shoes produced by Nike, Inc.,<br>
+                        with the first model released in 1987. Air Max shoes are identified by their<br>
+                        midsoles incorporating flexible urethane pouches filled with<br>
+                        pressurized gas, visible from the exterior of the shoe and intended<br>
+                        to provide cushioning to the underfoot.</i></p>
+                    <button class="button"> Add To Cart </button>
+            </div>
+            <div class = "model-area">
+                <img src="./img/shoe.png" class="shoe-photo">
+                <!-- <div id="container3D"></div>
+                <script type="module" src="model.js"></script> -->
             </div>
         </div>  
     </html>
